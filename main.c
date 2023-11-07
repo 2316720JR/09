@@ -5,15 +5,20 @@
 
 int main(void)
 {
-	int i;
+	int i, average;
+	int sum;
 	int grade[N_STUDENT];
 	printf("enter 5 scores: \n");
 	
+	sum = 0;
 	for(i=0; i<N_STUDENT; i++)
+	{
 		scanf("%d", &grade[i]);
-		
-	for(i=0; i<N_STUDENT; i++)
-		printf("grade[%d] = %d\n", i, grade[i]);
-		
+		sum += grade[i];
+	}
+	
+	average = sum / N_STUDENT;
+	printf("score average: %i\n", average);
+	
 	return 0;
 }
